@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Ламбриз — Каталог</title>
+
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <button id="menuButton" class="icon-button" type="button" aria-label="Меню">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+      <div class="logo">
+        <img src="logo.svg" alt="Ламбриз" />
+      </div>
+
+      <div class="header-actions">
+        <button id="favoritesButton" class="icon-button" type="button" aria-label="Избранное">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M12 20.4l-1.45-1.32C5.4 14.36 2 11.28 2 7.5 2 4.42 4.42 2 7.5 2c1.74 0 3.41.81 4.5 2.09C13.09 2.81 14.76 2 16.5 2 19.58 2 22 4.42 22 7.5c0 3.78-3.4 6.86-8.55 11.58L12 20.4z"
+            />
+          </svg>
+          <span id="favoritesCount" class="badge">0</span>
+        </button>
+        <button id="cartButton" class="icon-button" type="button" aria-label="Корзина">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM7.2 14h9.9c.8 0 1.5-.4 1.8-1.1l2.7-5.4a1 1 0 0 0-.9-1.5H6L5.6 4H3V2h4a1 1 0 0 1 1 .8l.4 2.2h13.3c1.5 0 2.5 1.6 1.8 3L20.5 13a3 3 0 0 1-2.7 1.7H7.2a1 1 0 0 1-1-1l.2-1.7"
+            />
+          </svg>
+          <span id="cartCount" class="badge">0</span>
+        </button>
+      </div>
+    </header>
+
+    <aside id="menuDrawer" class="drawer hidden">
+      <div class="drawer-head">
+        <div class="drawer-logo">
+          <img src="logo.svg" alt="Ламбриз" />
+        </div>
+        <button id="menuClose" class="icon-button" type="button" aria-label="Закрыть">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6 6l12 12M18 6l-12 12" />
+          </svg>
+        </button>
+      </div>
+      <nav class="drawer-menu">
+        <button data-nav="orders">Мои заказы</button>
+        <button data-nav="home">Каталог</button>
+        <button data-nav="about">О компании</button>
+        <button data-nav="payment">Оплата и доставка</button>
+        <button data-nav="contacts">Контакты</button>
+      </nav>
+    </aside>
+    <div id="drawerOverlay" class="overlay hidden"></div>
+
+    <main class="main">
+      <section id="screen-home" class="screen active">
+        <div class="hero-grid">
+          <button class="hero-tile" data-group="equipment">
+            <div class="hero-image" data-image="equipment"></div>
+            <div class="hero-label">Каталог оборудования</div>
+          </button>
+          <button class="hero-tile" data-group="stainless">
+            <div class="hero-image" data-image="stainless"></div>
+            <div class="hero-label">Изделия из нержавейки</div>
+          </button>
+        </div>
+      </section>
+
+      <section id="screen-categories" class="screen">
+        <div class="screen-head">
+          <button class="back-button" data-back="home">Назад</button>
+          <h2 id="categoriesTitle">Каталог</h2>
+        </div>
+        <div id="categoriesGrid" class="category-grid"></div>
+      </section>
+
+      <section id="screen-products" class="screen">
+        <div class="screen-head">
+          <button class="back-button" data-back="categories">Назад</button>
+          <h2 id="productsTitle">Категория</h2>
+        </div>
+        <div id="productsList" class="product-list"></div>
+      </section>
+
+      <section id="screen-product" class="screen">
+        <div class="screen-head">
+          <button class="back-button" data-back="products">Назад</button>
+          <h2 id="productTitle">Товар</h2>
+        </div>
+        <div id="productView" class="product-view"></div>
+      </section>
+
+      <section id="screen-favorites" class="screen">
+        <div class="screen-head">
+          <button class="back-button" data-back="home">Назад</button>
+          <h2>Избранное</h2>
+        </div>
+        <div class="favorites-actions">
+          <button id="favoritesToCart" class="secondary-button">Добавить всё в корзину</button>
+          <button id="favoritesClear" class="ghost-button">Очистить избранное</button>
+        </div>
+        <div id="favoritesList" class="product-list"></div>
+      </section>
+
+      <section id="screen-cart" class="screen">
+        <div class="screen-head">
+          <button class="back-button" data-back="home">Назад</button>
+          <h2>Корзина</h2>
+        </div>
+        <div id="cartList" class="cart-list"></div>
+        <div class="cart-summary">
+          <div class="cart-total">
+            Итого: <span id="cartTotal">0</span> ₽
+          </div>
+        </div>
+
+        <form id="orderForm" class="order-form">
+          <h3>Оформление заявки</h3>
+          <label>
+            ФИО *
+            <input id="inputName" type="text" required />
+          </label>
+          <label>
+            Телефон *
+            <input id="inputPhone" type="tel" required />
+          </label>
+          <label>
+            Email *
+            <input id="inputEmail" type="email" required />
+          </label>
+          <label class="checkbox">
+            <input id="policyCheck" type="checkbox" />
+            <span
+              >Согласен(а) с
+              <a id="policyLink" href="#" target="_blank" rel="noopener"
+                >политикой конфиденциальности</a
+              ></span
+            >
+          </label>
+          <div id="orderStatus" class="status"></div>
+          <button id="orderSubmit" class="primary-button" type="submit">
+            Оформить заявку
+          </button>
+        </form>
+      </section>
+
+      <section id="screen-confirmation" class="screen">
+        <div class="confirmation">
+          <h2>Заявка отправлена</h2>
+          <p>Мы свяжемся с вами в ближайшее время.</p>
+          <button class="primary-button" data-nav="home">Вернуться в каталог</button>
+        </div>
+      </section>
+
+      <section id="screen-orders" class="screen">
+        <div class="screen-head">
+          <button class="back-button" data-back="home">Назад</button>
+          <h2>Мои заказы</h2>
+        </div>
+        <div id="ordersList" class="orders-list"></div>
+      </section>
+
+      <section id="screen-about" class="screen">
+        <div class="screen-head">
+          <button class="back-button" data-back="home">Назад</button>
+          <h2>О компании</h2>
+        </div>
+        <div class="text-card" id="aboutText"></div>
+      </section>
+
+      <section id="screen-payment" class="screen">
+        <div class="screen-head">
+          <button class="back-button" data-back="home">Назад</button>
+          <h2>Оплата и доставка</h2>
+        </div>
+        <div class="text-card" id="paymentText"></div>
+      </section>
+
+      <section id="screen-contacts" class="screen">
+        <div class="screen-head">
+          <button class="back-button" data-back="home">Назад</button>
+          <h2>Контакты</h2>
+        </div>
+        <div class="contacts-card" id="contactsCard"></div>
+      </section>
+    </main>
+
+    <button id="cartBar" class="cart-bar hidden" type="button">
+      <span>Корзина</span>
+      <span id="cartBarTotal">0 ₽</span>
+    </button>
+
+    <script defer src="app.js?v=20260202"></script>
+  </body>
+</html>

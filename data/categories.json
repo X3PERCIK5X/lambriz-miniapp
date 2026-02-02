@@ -1,50 +1,38 @@
 [
   {
-    "id": "cat-pressure",
-    "title": "Насосы ВД и двигатели",
-    "image": "/assets/cat-pressure.svg",
-    "section": "equipment"
-  },
-  {
-    "id": "cat-foam",
-    "title": "Пеногенераторы",
-    "image": "/assets/cat-foam.svg",
-    "section": "equipment"
-  },
-  {
-    "id": "cat-sweep",
-    "title": "Поломоечные и подметальные машины",
-    "image": "/assets/cat-sweep.svg",
-    "section": "equipment"
-  },
-  {
-    "id": "cat-vac",
-    "title": "Пылесосы и химчистка",
-    "image": "/assets/cat-vac.svg",
-    "section": "equipment"
-  },
-  {
-    "id": "cat-chem",
-    "title": "Автохимия",
-    "image": "/assets/cat-chem.svg",
-    "section": "equipment"
-  },
-  {
-    "id": "cat-access-avd",
-    "title": "Аксессуары для АВД",
-    "image": "/assets/cat-access.svg",
-    "section": "equipment"
-  },
-  {
-    "id": "cat-access-wash",
-    "title": "Аксессуары для автомоек",
-    "image": "/assets/cat-access2.svg",
-    "section": "equipment"
-  },
-  {
-    "id": "cat-highpressure",
+    "id": "equipment-high-pressure",
+    "groupId": "equipment",
     "title": "Аппараты высокого давления",
-    "image": "/assets/cat-hp.svg",
-    "section": "equipment"
+    "image": "https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=800&q=70"
+  },
+  {
+    "id": "equipment-cleaning",
+    "groupId": "equipment",
+    "title": "Поломоечные машины",
+    "image": "https://images.unsplash.com/photo-1504362453368-5c0c4ea5c0a6?auto=format&fit=crop&w=800&q=70"
+  },
+  {
+    "id": "equipment-accessories",
+    "groupId": "equipment",
+    "title": "Аксессуары для АВД",
+    "image": "https://images.unsplash.com/photo-1503389152951-9f343605f61e?auto=format&fit=crop&w=800&q=70"
+  },
+  {
+    "id": "equipment-chemistry",
+    "groupId": "equipment",
+    "title": "Автохимия",
+    "image": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=800&q=70"
+  },
+  {
+    "id": "stainless-sinks",
+    "groupId": "stainless",
+    "title": "Мойки и столы",
+    "image": "https://images.unsplash.com/photo-1501045661006-fcebe0257c3f?auto=format&fit=crop&w=800&q=70"
+  },
+  {
+    "id": "stainless-racks",
+    "groupId": "stainless",
+    "title": "Стеллажи и шкафы",
+    "image": "https://images.unsplash.com/photo-1505843513577-22bb7d21e455?auto=format&fit=crop&w=800&q=70"
   }
 ]

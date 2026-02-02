@@ -1,90 +1,118 @@
 [
   {
-    "id": "prod-pressure-1",
-    "title": "Насос LM-P100",
-    "price": 98000,
-    "sku": "P100",
-    "shortDescription": "Высокое давление, промышленная серия",
-    "description": "Надежный насос высокого давления для профессиональных моек. Рассчитан на длительную непрерывную работу.",
-    "specs": ["Давление: 200 бар", "Производительность: 15 л/мин", "Питание: 380В"],
-    "images": ["/assets/prod-pressure-1.svg"],
-    "categoryId": "cat-pressure"
+    "id": "avd-compact-120",
+    "title": "АВД Compact 120",
+    "price": 42900,
+    "sku": "LM-AVD-120",
+    "shortDescription": "Компактный аппарат высокого давления для сервиса и клининга.",
+    "description": "Аппарат рассчитан на ежедневную нагрузку, подходит для автомоек и сервиса.",
+    "specs": [
+      { "label": "Давление", "value": "120 бар" },
+      { "label": "Расход воды", "value": "500 л/ч" },
+      { "label": "Питание", "value": "220 В" }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=900&q=70",
+      "https://images.unsplash.com/photo-1494319827402-b44f87e6c2c0?auto=format&fit=crop&w=900&q=70"
+    ],
+    "categoryId": "equipment-high-pressure"
   },
   {
-    "id": "prod-foam-1",
-    "title": "Пеногенератор FG-60",
-    "price": 54000,
-    "sku": "FG-60",
-    "shortDescription": "Устойчивая пена, емкость 60 л",
-    "description": "Профессиональный пеногенератор для автомоек и клининга.",
-    "specs": ["Объем: 60 л", "Материал: нержавеющая сталь", "Давление: до 8 бар"],
-    "images": ["/assets/prod-foam-1.svg"],
-    "categoryId": "cat-foam"
+    "id": "avd-pro-200",
+    "title": "АВД Pro 200",
+    "price": 89900,
+    "sku": "LM-AVD-200",
+    "shortDescription": "Профессиональная модель для интенсивной эксплуатации.",
+    "description": "Усиленная рама, высокая производительность и расширенная комплектация.",
+    "specs": [
+      { "label": "Давление", "value": "200 бар" },
+      { "label": "Расход воды", "value": "850 л/ч" },
+      { "label": "Питание", "value": "380 В" }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=900&q=70"
+    ],
+    "categoryId": "equipment-high-pressure"
   },
   {
-    "id": "prod-sweep-1",
-    "title": "Поломоечная машина SM-35",
-    "price": 189000,
-    "sku": "SM-35",
-    "shortDescription": "Компактная, для помещений до 1500 м²",
-    "description": "Маневренная поломоечная машина для ежедневной уборки.",
-    "specs": ["Ширина очистки: 350 мм", "Бак: 20 л", "Работа: до 2 ч"],
-    "images": ["/assets/prod-sweep-1.svg"],
-    "categoryId": "cat-sweep"
+    "id": "floor-cleaner-s1",
+    "title": "Поломоечная машина S1",
+    "price": 128000,
+    "sku": "LM-S1",
+    "shortDescription": "Маневренная поломоечная машина для помещений до 1500 м².",
+    "description": "Компактная модель с регулируемым давлением щётки и экономичным расходом воды.",
+    "specs": [
+      { "label": "Производительность", "value": "1500 м²/ч" },
+      { "label": "Бак", "value": "50 л" },
+      { "label": "Вес", "value": "68 кг" }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=900&q=60"
+    ],
+    "categoryId": "equipment-cleaning"
   },
   {
-    "id": "prod-vac-1",
-    "title": "Пылесос VC-30",
-    "price": 72000,
-    "sku": "VC-30",
-    "shortDescription": "Для химчистки и сухой уборки",
-    "description": "Промышленный пылесос с режимом экстракции для салонов и клининга.",
-    "specs": ["Объем: 30 л", "Мощность: 1400 Вт", "Вес: 12 кг"],
-    "images": ["/assets/prod-vac-1.svg"],
-    "categoryId": "cat-vac"
+    "id": "hose-kit-pro",
+    "title": "Комплект аксессуаров Pro",
+    "price": 15900,
+    "sku": "LM-ACC-01",
+    "shortDescription": "Шланг, пистолет и насадки для АВД.",
+    "description": "Подходит для профессиональных моделей АВД, устойчив к износу.",
+    "specs": [
+      { "label": "Длина шланга", "value": "15 м" },
+      { "label": "Материал", "value": "армированный" }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1505843513577-22bb7d21e455?auto=format&fit=crop&w=900&q=60"
+    ],
+    "categoryId": "equipment-accessories"
   },
   {
-    "id": "prod-chem-1",
-    "title": "Автошампунь AC-10",
-    "price": 5400,
-    "sku": "AC-10",
-    "shortDescription": "Концентрат для бесконтактной мойки",
-    "description": "Экономичный концентрат, подходит для пенных систем и пеногенераторов.",
-    "specs": ["Объем: 10 л", "Расход: 1:50", "pH: нейтральный"],
-    "images": ["/assets/prod-chem-1.svg"],
-    "categoryId": "cat-chem"
+    "id": "auto-chem-foam",
+    "title": "Активная пена Foam X",
+    "price": 1900,
+    "sku": "LM-CHEM-01",
+    "shortDescription": "Концентрированная пена для бесконтактной мойки.",
+    "description": "Обеспечивает плотную пену и безопасно для ЛКП.",
+    "specs": [
+      { "label": "Объём", "value": "5 л" },
+      { "label": "Расход", "value": "1:50" }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=900&q=60"
+    ],
+    "categoryId": "equipment-chemistry"
   },
   {
-    "id": "prod-access-1",
-    "title": "Комплект насадок",
-    "price": 8200,
-    "sku": "ACC-SET",
-    "shortDescription": "Универсальные насадки для АВД",
-    "description": "Набор из 5 насадок для разных задач мойки.",
-    "specs": ["Количество: 5", "Материал: латунь", "Совместимость: стандарт"],
-    "images": ["/assets/prod-access-1.svg"],
-    "categoryId": "cat-access-avd"
+    "id": "sink-double-1200",
+    "title": "Двойная мойка 1200",
+    "price": 38400,
+    "sku": "LM-SS-1200",
+    "shortDescription": "Нержавеющая мойка с двумя чашами.",
+    "description": "Сварная конструкция, подходит для пищевых производств и HoReCa.",
+    "specs": [
+      { "label": "Материал", "value": "AISI 304" },
+      { "label": "Размер", "value": "1200×600" }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1501045661006-fcebe0257c3f?auto=format&fit=crop&w=900&q=70"
+    ],
+    "categoryId": "stainless-sinks"
   },
   {
-    "id": "prod-access-2",
-    "title": "Шланг 15 м",
-    "price": 6900,
-    "sku": "H-15",
-    "shortDescription": "Усиленный шланг высокого давления",
-    "description": "Износостойкий шланг для автомоек и сервисов.",
-    "specs": ["Длина: 15 м", "Давление: до 250 бар", "Соединения: стандарт"],
-    "images": ["/assets/prod-access-2.svg"],
-    "categoryId": "cat-access-wash"
-  },
-  {
-    "id": "prod-hp-1",
-    "title": "АВД HP-200",
-    "price": 210000,
-    "sku": "HP-200",
-    "shortDescription": "Промышленный аппарат высокого давления",
-    "description": "Мощный АВД для тяжелых условий эксплуатации.",
-    "specs": ["Давление: 200 бар", "Производительность: 18 л/мин", "Питание: 380В"],
-    "images": ["/assets/prod-hp-1.svg"],
-    "categoryId": "cat-highpressure"
+    "id": "rack-4s",
+    "title": "Стеллаж 4 секции",
+    "price": 52000,
+    "sku": "LM-SS-400",
+    "shortDescription": "Стеллаж из нержавейки для складов и кухни.",
+    "description": "Регулируемая высота полок, высокая нагрузка.",
+    "specs": [
+      { "label": "Размер", "value": "1000×500×1800" },
+      { "label": "Нагрузка", "value": "150 кг/полка" }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1505843513577-22bb7d21e455?auto=format&fit=crop&w=900&q=70"
+    ],
+    "categoryId": "stainless-racks"
   }
 ]
