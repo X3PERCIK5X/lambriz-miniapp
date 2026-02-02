@@ -42,6 +42,30 @@ const state = {
   tgUser: null,
 };
 
+
+let touchStartX = 0;
+let touchStartY = 0;
+
+function setActiveMenu(target) {
+
+  ui.menuDrawer.addEventListener("touchstart", (event) => {
+    const touch = event.touches[0];
+    touchStartX = touch.clientX;
+    touchStartY = touch.clientY;
+  }, { passive: true });
+
+  ui.menuDrawer.addEventListener("touchmove", (event) => {
+    const touch = event.touches[0];
+    const deltaX = touch.clientX - touchStartX;
+    const deltaY = Math.abs(touch.clientY - touchStartY);
+    if (deltaX < -40 && deltaY < 30) {
+      closeDrawer();
+    }
+  }, { passive: true });
+  ui.menuLinks.forEach((btn) => {
+    btn.classList.toggle("active", btn.dataset.nav == target);
+  });
+}
 const ui = {
   screens: document.querySelectorAll(".screen"),
   menuButton: document.getElementById("menuButton"),
@@ -82,16 +106,25 @@ function setScreen(name) {
   ui.screens.forEach((screen) => {
     screen.classList.toggle("active", screen.id === `screen-${name}`);
   });
+  setActiveMenu(name);
 }
 
 function openDrawer() {
   ui.menuDrawer.classList.remove("hidden");
   ui.drawerOverlay.classList.remove("hidden");
+  requestAnimationFrame(() => {
+    ui.menuDrawer.classList.add("drawer-open");
+    ui.drawerOverlay.classList.add("overlay-visible");
+  });
 }
 
 function closeDrawer() {
-  ui.menuDrawer.classList.add("hidden");
-  ui.drawerOverlay.classList.add("hidden");
+  ui.menuDrawer.classList.remove("drawer-open");
+  ui.drawerOverlay.classList.remove("overlay-visible");
+  setTimeout(() => {
+    ui.menuDrawer.classList.add("hidden");
+    ui.drawerOverlay.classList.add("hidden");
+  }, 280);
 }
 
 function formatPrice(value) {
@@ -324,6 +357,21 @@ function bindEvents() {
   ui.menuClose.addEventListener("click", closeDrawer);
   ui.drawerOverlay.addEventListener("click", closeDrawer);
 
+
+  ui.menuDrawer.addEventListener("touchstart", (event) => {
+    const touch = event.touches[0];
+    touchStartX = touch.clientX;
+    touchStartY = touch.clientY;
+  }, { passive: true });
+
+  ui.menuDrawer.addEventListener("touchmove", (event) => {
+    const touch = event.touches[0];
+    const deltaX = touch.clientX - touchStartX;
+    const deltaY = Math.abs(touch.clientY - touchStartY);
+    if (deltaX < -40 && deltaY < 30) {
+      closeDrawer();
+    }
+  }, { passive: true });
   ui.menuLinks.forEach((btn) => {
     btn.addEventListener("click", () => {
       const target = btn.dataset.nav;
