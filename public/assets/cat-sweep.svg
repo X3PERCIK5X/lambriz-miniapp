@@ -1,0 +1,6 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='600' height='420' viewBox='0 0 600 420'>
+  <rect width='600' height='420' rx='28' fill='#e9edf1'/>
+  <circle cx='180' cy='210' r='90' fill='#b9c7d4'/>
+  <rect x='280' y='140' width='220' height='140' rx='26' fill='#d2dbe2'/>
+  <text x='40' y='380' font-family='Montserrat, Arial, sans-serif' font-size='28' font-weight='700' fill='#0c3551'>Поломоечные</text>
+</svg>

@@ -1,0 +1,5 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='700' height='700' viewBox='0 0 700 700'>
+  <rect width='700' height='700' rx='40' fill='#f2f2f2'/>
+  <rect x='120' y='120' width='460' height='460' rx='30' fill='#d9e1e8'/>
+  <text x='90' y='640' font-family='Montserrat, Arial, sans-serif' font-size='30' font-weight='700' fill='#0c3551'>Пылесос VC-30</text>
+</svg>

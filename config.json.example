@@ -1,0 +1,14 @@
+{
+  "webAppUrl": "https://your-miniapp-domain.example",
+  "orderEmailTo": "sales@example.com",
+  "orderEmailFrom": "no-reply@example.com",
+  "privacyPolicyUrl": "https://example.com/privacy",
+  "operatorName": "ООО «Ламбриз»",
+  "smtp": {
+    "host": "smtp.example.com",
+    "port": 587,
+    "secure": false,
+    "user": "smtp-user",
+    "pass": "smtp-pass"
+  }
+}
