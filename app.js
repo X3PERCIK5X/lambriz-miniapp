@@ -102,6 +102,14 @@ const ui = {
   orderStatus: document.getElementById("orderStatus"),
 };
 
+
+function forceMenuRight() {
+  const menuButton = document.getElementById("menuButton");
+  const headerActions = document.querySelector(".header-actions");
+  if (menuButton && headerActions && !headerActions.contains(menuButton)) {
+    headerActions.appendChild(menuButton);
+  }
+}
 function setScreen(name) {
   ui.screens.forEach((screen) => {
     screen.classList.toggle("active", screen.id === `screen-${name}`);
@@ -603,6 +611,7 @@ async function init() {
   loadState();
   await loadConfig();
   await loadData();
+  forceMenuRight();
   bindEvents();
   updateBadges();
   renderFavorites();
